@@ -17,6 +17,13 @@
     "url": "https://github.com/foisonocean/react-performant-collapsible"
   },
   "author": "foisonocean <hronro@gmail.com>",
+  "keywords": [
+    "react",
+    "collapsible",
+    "expand",
+    "performant",
+    "typescript"
+  ],
   "scripts": {
     "start": "vite",
     "build": "microbundle --jsx React.createElement"
