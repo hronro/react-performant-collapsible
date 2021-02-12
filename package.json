@@ -1,6 +1,6 @@
 {
   "name": "react-performant-collapsible",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A performant React.js Collapsible component",
   "source": "src/index.tsx",
   "main": "dist/index.js",
