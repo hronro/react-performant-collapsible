@@ -5,7 +5,7 @@ import { Collapsible } from '../src'
 
 const appStyle: CSSProperties = {
   width: 400,
-  height: 400,
+  height: 500,
   background: 'red',
 }
 
@@ -20,6 +20,25 @@ const contentStyle: CSSProperties = {
   alignItems: 'center',
 }
 
+const horizontalContainerStyle: CSSProperties = {
+  display: 'flex',
+  flex: 'none',
+  justifyContent: 'left',
+  alignItems: 'center',
+}
+
+const horizontalItemStyle: CSSProperties = {
+  width: 100,
+  height: 100,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: 'green',
+  color: 'white',
+  fontSize: 18,
+  marginRight: 10,
+}
+
 const endStyle: CSSProperties = {
   fontSize: 28,
   color: 'white',
@@ -27,21 +46,40 @@ const endStyle: CSSProperties = {
 
 export function App () {
   const [ collapsible, setCollapsible ] = useState(false)
+  const [ horizontalCollapsible, setHorizontalCollapsible ] = useState(false)
 
-  const handleClick = useCallback(() => {
+  const handleBtnClick = useCallback(() => {
     setCollapsible(prevState => !prevState)
+  }, [])
+
+  const handleHorizontalBtnClick = useCallback(() => {
+    setHorizontalCollapsible(prevState => !prevState)
   }, [])
 
   return (
     <div style={appStyle}>
       <p>
-        <button onClick={handleClick}>Click</button>
+        <button onClick={handleBtnClick}>Click</button>
       </p>
       <Collapsible collapsible={collapsible} maskColor="red">
         <div style={contentStyle}>
           Hello World
         </div>
       </Collapsible>
+
+      <br />
+
+      <button onClick={handleHorizontalBtnClick}>Click</button>
+      <div style={horizontalContainerStyle}>
+       <Collapsible collapsible={horizontalCollapsible} horizontal maskColor="red">
+          <div style={horizontalItemStyle}>
+            Left
+          </div>
+        </Collapsible> 
+        <div style={horizontalItemStyle}>
+          Rright
+        </div>
+      </div>
       <p style={endStyle}>
         End
       </p>
