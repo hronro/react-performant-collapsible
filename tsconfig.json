@@ -7,7 +7,7 @@
     "module": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "jsx": "react",
-     "isolatedModules": true,
+    "isolatedModules": true,
 
     /* Strict Type-Checking Options */
     "strict": true,

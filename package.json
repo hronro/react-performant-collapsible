@@ -3,10 +3,13 @@
   "version": "0.1.2",
   "description": "A performant React.js Collapsible component",
   "source": "src/index.tsx",
-  "main": "dist/index.js",
-  "exports": "./dist/foo.modern.js",
-  "module": "dist/index.module.js",
-  "unpkg": "dist/index.umd.js",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
   "files": [
     "dist",
     "src",
