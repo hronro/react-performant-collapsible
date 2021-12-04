@@ -5,7 +5,7 @@ A performant React.js Collapsible component.
 
 ## Why it's performant?
 
-It doesn't repaint at all during the collapse/expand animation:
+It doesn't repaint at all during the collapse/expand animation (It only repaint once at the beginning of the animation and once at the end of the animation):
 ![Doesn't Repaint](./doc-images/repaint.gif)
 
 ## Installation
